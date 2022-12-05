@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Guess-Me</title>
+  <link rel="stylesheet" href="lib/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- header -->
+  <header class="text-center bg-info py-5">
+    <img src="img/layout/logo.png" class="img-fluid" alt="Responsive image" />
+    <h1>Guess Who</h1>
+  </header>
+
+  <main>
+    <!-- game-start -->
+    <section class="game-start text-center p-5 bg-light text-dark">
+      <h3>
+        Think of someone...
+        <small class="text-muted">But keep it a secret...</small>
+      </h3>
+      <button class="btn btn-start btn-info btn-lg m-3">I'm Ready!</button>
+    </section>
+
+    <!-- quest -->
+    <section class="quest text-center p-5 bg-light text-dark" style="display: none">
+      <h2></h2>
+      <button class="btn btn-yes btn-outline-success btn-lg m-3">Yes</button>
+      <button class="btn btn-no btn-outline-danger btn-lg m-3">No</button>
+    </section>
+
+    <!-- new question -->
+    <section class="new-quest p-3" style="display: none">
+      <h2 class="p-2">OK, I give up...</h2>
+      <form>
+        <div class="form-group ending-form p-2">
+          <label for="newGuess">You thought of:</label>
+          <input type="text" class="form-control" id="newGuess" placeholder="Your Guess">
+        </div>
+        <div class="form-group ending-form p-2">
+          <label for="newQuest">Question to differentiate:</label>
+          <input type="text" class="form-control" id="newQuest" placeholder="The answer is YES for yours">
+        </div>
+        <button type="submit" class="btn btn-add-guess btn-secondary m-3">Make me Smarter!</button>
+      </form>
+    </section>
+
+    <!-- victorious -->
+    <section class="victorious bg-info text-center p-4" style="display: none">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-2">Yes, I knew it!</h1>
+          <p class="lead">Try again and help us get smarter.</p>
+          <button type="button" class="btn btn-outline-success">Do Over</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <div class="container-fluid bg-dark text-light text-center py-3">
+    All rights reserved ©️ Moria Hamami
+  </div>
+
+  <script src="lib/jquery/jquery.js"></script>
+  <script src="lib/bootstrap/bootstrap.bundel.js"></script>
+  <script src="js/storage.service.js"></script>
+  <script src="js/quest.service.js"></script>
+  <script src="js/quest.controller.js"></script>
+</body>
+
+</html>
